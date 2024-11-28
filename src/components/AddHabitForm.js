@@ -6,9 +6,8 @@ export default function AddHabitForm({ onAddHabit }) {
   const handleSubmit = (e) => {
     // TODO: write code to handle form submission
     e.preventDefault();
-      let now = new Date();
-      let currentTime = now.toLocaleTimeString();
-      
+    let now = new Date();
+    let currentTime = now.toLocaleTimeString();
     const newHabit = {
       id: currentTime,
       habit: habitName,
@@ -21,7 +20,7 @@ export default function AddHabitForm({ onAddHabit }) {
     <form className="add-form" onSubmit={handleSubmit}>
       <h4>Add Habit</h4>
       <input type="text" onChange={setHabitName} />
-      <input type="submit" value="Add" />
+      <input type="submit" value="Add Habit" />
     </form>
   );
 }
