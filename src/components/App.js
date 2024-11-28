@@ -13,8 +13,8 @@ function App() {
   const handleToggleHabit = (id) => {
     // TODO: write code to toggle a habit's status
     setHabits((prevHabits) =>
-      prevHabits.map((item) =>
-        item.id === id ? { ...item, packed: !item.packed } : item
+      prevHabits.map((habit) =>
+        habit.id === id ? { ...habit, completed: !habit.completed } : habit
       )
     );
   };
