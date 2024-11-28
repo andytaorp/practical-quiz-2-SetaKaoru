@@ -6,4 +6,12 @@ import React from "react";
  *
  * TODO: implement the Habit component here
  */
-export default function Habit() {}
+export default function Habit({habit, handleToggleHabit, id}) {
+    return (
+        <h3>
+            <input type="checkbox" onChange={() => handleToggleHabit(id)}/>
+            {id}
+            {habit}
+        </h3>
+    )
+}
