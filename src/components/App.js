@@ -5,9 +5,9 @@ import HabitList from "./HabitList";
 function App() {
   const [habits, setHabits] = useState([]);
 
-  const handleAddHabit = (habitName) => {
+  const handleAddHabit = (habit) => {
     // TODO: write code to add a new habit here
-    setHabits((prev) => [...prev, habitName]);
+    setHabits((prev) => [...prev, habit]);
   };
 
   const handleToggleHabit = (id) => {

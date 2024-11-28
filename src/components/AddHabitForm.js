@@ -10,16 +10,20 @@ export default function AddHabitForm({ onAddHabit }) {
     let currentTime = now.toLocaleTimeString();
     const newHabit = {
       id: currentTime,
-      habit: habitName,
+      habitName: habitName,
       completed: false,
     };
     onAddHabit(newHabit)
   };
 
+  function handleName(em) {
+    setHabitName(em.target.value);
+  }
+
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h4>Add Habit</h4>
-      <input type="text" onChange={setHabitName} />
+      <input type="text" onChange={handleName} />
       <input type="submit" value="Add Habit" />
     </form>
   );
