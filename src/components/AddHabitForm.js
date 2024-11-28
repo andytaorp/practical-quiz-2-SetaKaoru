@@ -24,7 +24,7 @@ export default function AddHabitForm({ onAddHabit }) {
     <form className="add-form" onSubmit={handleSubmit}>
       <h4>Add Habit</h4>
       <input type="text" onChange={handleName} />
-      <input type="submit" value="Add Habit" />
+      <input type="submit" value="New Habit" />
     </form>
   );
 }
