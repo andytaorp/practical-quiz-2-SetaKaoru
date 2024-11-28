@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function AddHabitForm({ onAddHabit }) {
-  const [habitName, setHabitName] = useState("");
+  const [habitName, setHabitName] = useState("New Habit");
 
   const handleSubmit = (e) => {
     // TODO: write code to handle form submission
@@ -23,8 +23,8 @@ export default function AddHabitForm({ onAddHabit }) {
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h4>Add Habit</h4>
-      <input type="text" onChange={handleName} />
-      <input type="submit" value="New Habit" />
+      <input type="text" value={habitName} onChange={handleName} />
+      <input type="submit" value="Add Habit" />
     </form>
   );
 }
